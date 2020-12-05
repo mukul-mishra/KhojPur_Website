@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Khojpur_found _report</title>
+    <link rel="stylesheet" type="text/css" href="welcome.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(163, 80, 41);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ffef13;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .dropbtnPlace {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropbtnItem {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        .dropdown:hover .dropbtnPlace {
+            background-color: #3e8e41;
+        }
+
+        .dropdown:hover .dropbtnItem {
+            background-color: #3e8e41;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: rgb(200, 255, 0);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            background-color: yellow;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-50 {
+
+            width: 50%;
+            margin-top: 6px;
+            display: inline;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        .signin {
+            background-color: rgb(200, 255, 0);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .imagePick {
+            background-color: rgb(200, 255, 0);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline;
+        }
+
+        .imagePick:hover {
+            background-color: #45a049;
+        }
+
+        .signin:hover {
+            background-color: #45a049;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="background">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="dashboard.html">DashBoard</a>
+        <a href="found_report.html">Found Item</a>
+        <a href="lost_screen.html">Lost Item</a>
+        <a href="claimed_screen.html">Claimed Items</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    
+    <div class="centered">
+        <div class="container">
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="col-50">
+                        <div class="dropdown">
+                            <button class="dropbtnPlace">Place</button>
+                            <div class="dropdown-content">
+                                <a href="#">Place 1</a>
+                                <a href="#">Place 2</a>
+                                <a href="#">Place 3</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtnItem">Item</button>
+                            <div class="dropdown-content">
+                                <a href="#">Item 1</a>
+                                <a href="#">Item 2</a>
+                                <a href="#">Item 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Item Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="UserEmail" placeholder="Item Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Item Description </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="password" placeholder="Item Description">
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="images/img_avatar.png" alt="Avatar" style="width:200px">
+                    <div class="col-50">
+                        <p> </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-50">
+                        <div>
+                            <a class="imagePick" href="dashboard.html">Gallery</a>
+                            <a class="imagePick" href="dashboard.html">Camera</a>
+                        </div>
+                        <div class="col-50">
+                            <p> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--input type="submit" value="Login"-->
+                    <a class="signin" href="dashboard.html">Submit Report</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
